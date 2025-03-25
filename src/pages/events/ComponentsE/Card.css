@@ -1,0 +1,44 @@
+/* Updated CSS with enhanced shadows */
+.ngo-title {
+  font-family: "Poppins", sans-serif;
+  color: #1a4d2e;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.subtitle {
+  color: #4b6b4d !important;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.event-card {
+  border-radius: 20px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 12px 30px 6px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  background: #ffffff;
+  position: relative;
+}
+
+.event-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Rest of your existing CSS remains the same */
+.image-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px 20px 0 0;
+}
+
+.date-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  backdrop-filter: blur(4px);
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  padding: 2px;
+}
