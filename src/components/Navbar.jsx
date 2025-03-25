@@ -20,7 +20,7 @@ function CustomNavbar() {
             height="50"
             className="rounded-circle me-2"
           />
-          <span className="fw-bold text-dark">NGO Name</span>
+          <span className="fw-bold text-dark">Hirvankur</span>
         </Navbar.Brand>
 
         {/* Toggle Button for Mobile */}
