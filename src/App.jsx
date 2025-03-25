@@ -1,14 +1,16 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import CustomNavbar from "./components/Navbar"; // Import the Navbar component
-import "bootstrap/dist/css/bootstrap.min.css";
-
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+// import Home from "./pages/home/home";
+import Home from "./pages/home/home";
+import Navbar from "./components/Navbar"; // If you have a Navbar
+import "bootstrap/dist/css/bootstrap.min.css"; // ✅ Bootstrap Import
 
 function App() {
   return (
     <Router>
-      <CustomNavbar /> {/* Use the correct component name */}
+      <Navbar /> {/* Global Navbar */}
       <Routes>
-        {/* Define your routes here */}
+      <Route path="/" element={<Home />} />
+        {/* Add other pages like About, Contact, etc. */}
       </Routes>
     </Router>
   );
