@@ -4,6 +4,8 @@ import 'aos/dist/aos.css';
 import "../ComponentsE/Card.css";
 
 const Card = () => {
+
+
     const NGOEvents = [
         {
             title: "Tree Plantation Drive",

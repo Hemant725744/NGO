@@ -1,0 +1,43 @@
+.events-section {
+  background: linear-gradient(to right, #f8f9fa, #e9f5e9);
+}
+
+.event-image {
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 0.375rem;
+  border-top-right-radius: 0.375rem;
+}
+
+.card {
+  transition: transform 0.3s, box-shadow 0.3s;
+  border-radius: 0.375rem;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+}
+
+.badge.bg-success {
+  background-color: #28a745 !important;
+}
+
+.badge.bg-info {
+  background-color: #17a2b8 !important;
+}
+
+.achievement-banner {
+  background: linear-gradient(45deg, #28a745, #1e7e34);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.form-select {
+  border-radius: 0.5rem;
+  border: 2px solid #ced4da;
+}
+
+.form-select:focus {
+  border-color: #80bdff;
+  box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.25);
+}
