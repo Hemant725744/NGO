@@ -1,11 +1,13 @@
-import React from 'react'
+import React from "react";
+import Intro from "./components/intro";
 
-const Home = () => {
+function Home() {
     return (
         <div>
-            <h1>Home</h1>
+            <Intro />
+
         </div>
-    )
+    );
 }
 
-export default Home
+export default Home;
