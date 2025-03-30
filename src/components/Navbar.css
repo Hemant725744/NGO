@@ -1,0 +1,101 @@
+.custom-navbar {
+  background-color: rgba(255, 255, 255, 0.98) !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 1.2rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.logo-img {
+  height: 55px; /* Increased logo size */
+  margin-right: 15px;
+  transition: transform 0.3s ease;
+}
+
+.brand-name {
+  font-weight: 700;
+  color: #2c3e50;
+  font-size: 2rem; /* Larger brand name */
+  letter-spacing: 0.5px;
+}
+
+.nav-link {
+  color: #2c3e50 !important;
+  font-weight: 500;
+  margin: 0 15px;
+  position: relative;
+  transition: color 0.3s ease;
+  font-size: 1.2rem; /* Increased nav link size */
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #2ecc71;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #2ecc71 !important;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.btn-contribute {
+  background-color: #2ecc71 !important;
+  color: white !important;
+  border-radius: 25px;
+  padding: 12px 35px !important; /* Larger button */
+  margin-left: 15px;
+  transition: all 0.3s ease;
+  font-size: 1.1rem; /* Larger button text */
+  font-weight: 600;
+}
+
+.btn-contribute:hover {
+  background-color: #27ae60 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(46, 204, 113, 0.3);
+}
+
+/* Mobile View */
+@media (max-width: 991px) {
+  .nav-link {
+    margin: 15px 0;
+    font-size: 1.1rem; /* Larger mobile font */
+  }
+
+  .btn-contribute {
+    margin-left: 0;
+    margin-top: 15px;
+    font-size: 1rem; /* Larger mobile button */
+    padding: 10px 25px !important;
+  }
+
+  .brand-name {
+    font-size: 1.8rem; /* Adjusted brand name */
+  }
+
+  .logo-img {
+    height: 50px; /* Adjusted logo size */
+  }
+
+  .navbar-toggler-icon {
+    width: 1.5em;
+    height: 1.5em;
+  }
+}
