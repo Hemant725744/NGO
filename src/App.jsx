@@ -8,7 +8,7 @@ import Achivment from "../src/pages/Achivment/Achivment";
 import Contribute from "../src/pages/contribute/Contribute";
 import Footer from "../src/pages/Footer/Footer"
 import Contact from "../src/pages/Contact/Contact";
-
+import Teampage from "./pages/Teams/Teampage";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from "react";
@@ -57,7 +57,11 @@ function App() {
         {
           path: "contact",
           element: <Contact />
-        }
+        },
+        {
+          path: "teams",
+          element: <Teampage />
+        },
       ]
     }
   ]);
