@@ -7,7 +7,7 @@ export default function Impact() {
         <div className="bg-light py-5">
             <div className="container py-5">
                 <div className="text-center mb-5">
-                    <h2 className="fw-bold display-6">Our Impact & Recognition</h2>
+                    <h2 className="fw-bold display-6 impact-title">Our Impact & Recognition</h2>
                     <p className="lead text-muted">Celebrating our achievements and continued commitment</p>
                 </div>
 

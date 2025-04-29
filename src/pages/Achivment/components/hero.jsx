@@ -6,11 +6,11 @@ export default function Hero() {
         <div className="bg-light py-5">
             <div className="container py-5">
                 <div className="text-center mb-5">
-                    <h1 className="display-4 fw-bold">
+                    <h1 className="display-4 fw-bold hero-title">
                         <span className="d-block">Transforming Lives,</span>
                         <span className="d-block text-success">Preserving Nature</span>
                     </h1>
-                    <p className="lead text-muted mt-3">
+                    <p className="lead text-muted mt-3 hero-subtitle">
                         The Hirvankur Foundation's journey of environmental stewardship and community empowerment
                     </p>
                 </div>

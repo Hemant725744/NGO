@@ -1,0 +1,52 @@
+/* Define the color scheme */
+:root {
+    --primary-color: #B17F59; /* Main accent color */
+    --secondary-color: #A5B68D; /* Secondary accent color */
+    --tertiary-color: #C1CFA1; /* Tertiary accent color */
+    --background-color: #EDE8DC; /* Background color */
+    --text-color: #333; /* Default text color */
+}
+
+/* General styles */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* Hero Section */
+.hero-title {
+    color: var(--primary-color);
+}
+
+.hero-subtitle {
+    color: var(--secondary-color);
+}
+
+/* Stat Cards */
+.stat-card {
+    background-color: var(--tertiary-color);
+    color: var(--text-color);
+}
+
+.stat-card h2 {
+    color: var(--primary-color);
+}
+
+/* Initiatives Section */
+.initiative-title {
+    color: var(--primary-color);
+}
+
+.initiative-description {
+    color: var(--secondary-color);
+}
+
+/* Impact Section */
+.impact-title {
+    color: var(--primary-color);
+}
+
+.impact-card {
+    background-color: var(--tertiary-color);
+    color: var(--text-color);
+}
