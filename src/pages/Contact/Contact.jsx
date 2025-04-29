@@ -1,9 +1,15 @@
 import React from 'react'
+//import ContactHeader from './component/ContactHeader '
+import GetInTouch from './component/GetInTouch'
+import Follows from './component/Follows'
 
 const Contact = () => {
     return (
         <div>
-            <h1>Contact</h1>
+            {/* <ContactHeader /> */}
+            <GetInTouch />
+            <Follows />
+
         </div>
     )
 }

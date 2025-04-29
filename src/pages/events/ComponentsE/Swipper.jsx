@@ -8,11 +8,16 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
 import "../ComponentsE/Swipper.css";
-import IM1 from "../assets/images (1).jpeg"
-import IM2 from "../assets/images (2).jpeg"
 
-import IM3 from "../assets/images (3).jpeg"
-import IM4 from "../assets/images.jpeg"
+
+
+
+
+import IM1 from "../assets/vertical-shot-river-surrounded-by-mountains-meadows-scotland.jpg"
+import IM2 from "../assets/syahrin-seth-WhWYV0nQJGc-unsplash.jpg"
+import IM3 from "../assets/yogesh-pedamkar-guZR8QV0x28-unsplash.jpg"
+import IM4 from "../assets/sofie-jarvis-ad6Bdxs_o0A-unsplash (1).jpg"
+import IM5 from "../assets/kelly-sikkema-BcErkVtF0as-unsplash.jpg"
 
 // Import required modules
 import { Autoplay, Pagination } from 'swiper/modules';
@@ -47,7 +52,7 @@ export default function Swipper() {
                 loop={true}
                 slidesPerView={'auto'}
             >
-                {[IM1, IM2, IM3, IM4].map((img, index) => (
+                {[IM1, IM2, IM3, IM4, IM5].map((img, index) => (
                     <SwiperSlide key={index}>
                         <div className="slide-content">
                             <img src={img} alt={`Event ${index + 1}`} />

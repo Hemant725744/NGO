@@ -6,7 +6,9 @@ import About from "../src/pages/about/About";
 import Event from "../src/pages/events/Event";
 import Achivment from "../src/pages/Achivment/Achivment";
 import Contribute from "../src/pages/contribute/Contribute";
+import Footer from "../src/pages/Footer/Footer"
 import Contact from "../src/pages/Contact/Contact";
+
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from "react";
@@ -31,7 +33,10 @@ function App() {
       children: [
         {
           index: true,
-          element: <Home />
+          element: <diV>
+            <Home />
+
+          </diV>
         },
         {
           path: "about",
