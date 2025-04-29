@@ -3,6 +3,10 @@
   backdrop-filter: blur(10px);
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -13,6 +17,10 @@
 }
 
 .logo-img {
+  height: 50px;
+  width: auto;
+  height: 50px;
+  width: auto;
   height: 50px;
   width: auto;
   height: 50px;
@@ -28,8 +36,11 @@
 
 .nav-link {
   position: relative;
+  position: relative;
   margin: 0 15px;
   position: relative;
+  margin: 0 15px;
+  color: #2c3e50 !important;
   margin: 0 15px;
   color: #2c3e50 !important;
   transition: color 0.3s ease;
@@ -44,9 +55,15 @@
   height: 2px;
   background: #e74c3c;
   background: #e74c3c;
+  background: #e74c3c;
+  background: #e74c3c;
   transition: width 0.3s ease;
 }
 
+.nav-link:hover::after,
+.nav-link.active::after {
+.nav-link:hover::after,
+.nav-link.active::after {
 .nav-link:hover::after,
 .nav-link.active::after {
 .nav-link:hover::after,
@@ -64,10 +81,26 @@
   font-weight: 500;
 }
 
+.nav-link.active {
+  color: #e74c3c !important;
+  font-weight: 500;
+}
+
+.nav-link.active {
+  color: #e74c3c !important;
+  font-weight: 500;
+}
+
 .btn-contribute {
   background: #e74c3c;
   background: #e74c3c;
+  background: #e74c3c;
+  background: #e74c3c;
   color: white !important;
+  border-radius: 30px;
+  padding: 8px 25px;
+  border-radius: 30px;
+  padding: 8px 25px;
   border-radius: 30px;
   padding: 8px 25px;
   border-radius: 30px;
@@ -79,8 +112,20 @@
 .btn-contribute:hover {
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
+  box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
 }
 
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background: rgba(255, 255, 255, 0.98);
+    padding: 20px;
+    margin-top: 15px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-item {
+    margin: 10px 0;
 @media (max-width: 991.98px) {
   .navbar-collapse {
     background: rgba(255, 255, 255, 0.98);
@@ -96,6 +141,58 @@
 
   .btn-contribute {
     margin-left: 0;
+    margin-top: 10px;
+  }
+}
+.custom-navbar {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px 20px; /* Add some padding to the navbar */
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.logo-img {
+  height: 40px; /* Adjust logo size for smaller screens */
+  width: auto;
+  margin-right: 10px; /* Adjust margin for smaller screens */
+  transition: transform 0.3s ease;
+}
+
+.brand-name {
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+.navbar-toggler {
+  border: none;
+  padding: 0.25rem 0.5rem;
+  font-size: 1.25rem;
+  line-height: 1;
+  background-color: transparent;
+}
+
+.navbar-toggler-icon {
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: middle;
+  content: "";
+  background: transparent
+    url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(0, 0, 0, 0.5)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
+    no-repeat center center/100% 100%;
+  box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
+}
+
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background: rgba(255, 255, 255, 0.98);
+    padding: 20px;
     margin-top: 10px;
   }
 }
@@ -181,7 +278,205 @@
   margin-right: 10px; /* Adjust margin for smaller screens */
   transition: transform 0.3s ease;
 }
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
 
+  .nav-item {
+    margin: 10px 0;
+  }
+
+  .btn-contribute {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
+.custom-navbar {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px 20px; /* Add some padding to the navbar */
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.logo-img {
+  height: 40px; /* Adjust logo size for smaller screens */
+  width: auto;
+  margin-right: 10px; /* Adjust margin for smaller screens */
+  transition: transform 0.3s ease;
+}
+
+.brand-name {
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+.navbar-toggler {
+  border: none;
+  padding: 0.25rem 0.5rem;
+  font-size: 1.25rem;
+  line-height: 1;
+  background-color: transparent;
+}
+
+.navbar-toggler-icon {
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: middle;
+  content: "";
+  background: transparent
+    url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(0, 0, 0, 0.5)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
+    no-repeat center center/100% 100%;
+}
+
+.nav-link {
+  position: relative;
+  margin: 0 10px; /* Adjust margin for smaller screens */
+  color: #2c3e50 !important;
+  transition: color 0.3s ease;
+  font-size: 1rem; /* Adjust font size for smaller screens */
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -3px; /* Adjust bottom position */
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #e74c3c;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.nav-link.active {
+  color: #e74c3c !important;
+  font-weight: 500;
+}
+
+.btn-contribute {
+  background: #e74c3c;
+  color: white !important;
+  border-radius: 25px; /* Slightly smaller border-radius */
+  padding: 6px 18px; /* Adjust padding */
+  margin-left: 10px; /* Adjust margin */
+  transition: all 0.3s ease;
+  font-size: 0.9rem; /* Adjust font size */
+}
+
+.btn-contribute:hover {
+  transform: translateY(-1px); /* Less pronounced hover effect */
+  box-shadow: 0 3px 10px rgba(231, 76, 60, 0.3); /* Less pronounced shadow */
+}
+
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background: rgba(255, 255, 255, 0.98);
+    padding: 20px;
+    margin-top: 10px; /* Adjust margin-top */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar-nav {
+    text-align: center; /* Center align menu items on mobile */
+  }
+
+  .nav-item {
+    margin: 10px 0;
+  }
+
+.nav-link {
+  position: relative;
+  margin: 0 10px; /* Adjust margin for smaller screens */
+  color: #2c3e50 !important;
+  transition: color 0.3s ease;
+  font-size: 1rem; /* Adjust font size for smaller screens */
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -3px; /* Adjust bottom position */
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #e74c3c;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.nav-link.active {
+  color: #e74c3c !important;
+  font-weight: 500;
+}
+
+.btn-contribute {
+  background: #e74c3c;
+  color: white !important;
+  border-radius: 25px; /* Slightly smaller border-radius */
+  padding: 6px 18px; /* Adjust padding */
+  margin-left: 10px; /* Adjust margin */
+  transition: all 0.3s ease;
+  font-size: 0.9rem; /* Adjust font size */
+}
+
+.btn-contribute:hover {
+  transform: translateY(-1px); /* Less pronounced hover effect */
+  box-shadow: 0 3px 10px rgba(231, 76, 60, 0.3); /* Less pronounced shadow */
+}
+
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background: rgba(255, 255, 255, 0.98);
+    padding: 20px;
+    margin-top: 10px; /* Adjust margin-top */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar-nav {
+    text-align: center; /* Center align menu items on mobile */
+  }
+
+  .nav-item {
+    margin: 10px 0;
+  }
+
+  .nav-link {
+    margin: 0; /* Remove horizontal margin on mobile */
+    display: block; /* Make each link take full width */
+    padding: 8px 0; /* Add vertical padding */
+    margin: 0; /* Remove horizontal margin on mobile */
+    display: block; /* Make each link take full width */
+    padding: 8px 0; /* Add vertical padding */
+  }
+
+  .btn-contribute {
+    margin-left: 0;
+    margin-top: 15px; /* Add more top margin for the button */
+    display: block; /* Make the button take full width */
+  }
+
+  .logo-img {
+    height: 35px; /* Further adjust logo size for very small screens */
+    margin-right: 8px;
+    margin-top: 15px; /* Add more top margin for the button */
+    display: block; /* Make the button take full width */
 .brand-name {
   font-weight: 700;
   color: #2c3e50;

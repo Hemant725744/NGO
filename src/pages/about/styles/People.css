@@ -1,0 +1,189 @@
+/* People.css */
+
+section {
+    padding-top: 4rem; /* Adjust as needed */
+    padding-bottom: 4rem; /* Adjust as needed */
+    background-color: #f9f9f9; /* Light grey background, adjust as needed */
+  }
+  
+  .max-w-7xl {
+    max-width: 80rem; /* Tailwind's default for xl, adjust if needed */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .lg\:text-center {
+    text-align: center; /* Tailwind's large screen center */
+  }
+  
+  .text-base {
+    font-size: 1rem; /* Tailwind's default base font size */
+  }
+  
+  .text-purple-primary {
+    color: #9b87f5; /* Purple color from the image */
+  }
+  
+  .font-semibold {
+    font-weight: 600; /* Tailwind's semibold */
+  }
+  
+  .tracking-wide {
+    letter-spacing: 0.025em; /* Tailwind's wide tracking */
+  }
+  
+  .uppercase {
+    text-transform: uppercase; /* Tailwind's uppercase */
+  }
+  
+  .mt-2 {
+    margin-top: 0.5rem; /* Tailwind's mt-2 */
+  }
+  
+  .text-3xl {
+    font-size: 1.875rem; /* Tailwind's 3xl */
+    line-height: 2.25rem;
+  }
+  
+  .leading-8 {
+    line-height: 2rem; /* Tailwind's leading-8 */
+  }
+  
+  .font-extrabold {
+    font-weight: 800; /* Tailwind's extrabold */
+  }
+  
+  .tracking-tight {
+    letter-spacing: -0.025em; /* Tailwind's tight tracking */
+  }
+  
+  .text-gray-900 {
+    color: #1a202c; /* Tailwind's gray-900 */
+  }
+  
+  .sm\:text-4xl {
+    /* Tailwind's small screen 4xl */
+    @media (min-width: 640px) {
+      font-size: 2.25rem;
+      line-height: 2.5rem;
+    }
+  }
+  
+  .mt-4 {
+    margin-top: 1rem; /* Tailwind's mt-4 */
+  }
+  
+  .max-w-2xl {
+    max-width: 42rem; /* Tailwind's max-w-2xl */
+  }
+  
+  .text-xl {
+    font-size: 1.25rem; /* Tailwind's xl */
+    line-height: 1.75rem;
+  }
+  
+  .text-gray-500 {
+    color: #718096; /* Tailwind's gray-500 */
+  }
+  
+  .lg\:mx-auto {
+    /* Tailwind's large screen horizontal auto margin */
+    @media (min-width: 1024px) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  
+  .mt-16 {
+    margin-top: 4rem; /* Tailwind's mt-16 */
+  }
+  
+  .grid {
+    display: grid; /* Tailwind's grid */
+  }
+  
+  .grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr)); /* Tailwind's 1 column grid */
+  }
+  
+  .gap-12 {
+    gap: 3rem; /* Tailwind's gap-12 */
+  }
+  
+  .sm\:grid-cols-2 {
+    /* Tailwind's small screen 2 column grid */
+    @media (min-width: 640px) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  
+  .lg\:grid-cols-3 {
+    /* Tailwind's large screen 3 column grid */
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+  
+  .text-center {
+    text-align: center; /* Tailwind's text center */
+  }
+  
+  .mx-auto {
+    margin-left: auto; /* Tailwind's horizontal auto margin */
+    margin-right: auto;
+  }
+  
+  .h-40 {
+    height: 10rem; /* Tailwind's h-40 */
+  }
+  
+  .w-40 {
+    width: 10rem; /* Tailwind's w-40 */
+  }
+  
+  .rounded-full {
+    border-radius: 9999px; /* Tailwind's full border radius for circles */
+  }
+  
+  .overflow-hidden {
+    overflow: hidden; /* Tailwind's overflow hidden */
+  }
+  
+  .h-full {
+    height: 100%; /* Tailwind's full height */
+  }
+  
+  .w-full {
+    width: 100%; /* Tailwind's full width */
+  }
+  
+  .object-cover {
+    object-fit: cover; /* Tailwind's object cover */
+  }
+  
+  .mt-6 {
+    margin-top: 1.5rem; /* Tailwind's mt-6 */
+  }
+  
+  .text-lg {
+    font-size: 1.125rem; /* Tailwind's lg */
+    line-height: 1.75rem;
+  }
+  
+  .font-medium {
+    font-weight: 500; /* Tailwind's medium */
+  }
+  
+  .text-purple-secondary {
+    color: #7e69ab; /* Another purple shade from the image */
+  }
+  .mt-2 {
+    margin-top: 0.5rem; /* Tailwind's mt-2 */
+  }
+  
+  .text-base {
+    font-size: 1rem; /* Tailwind's base */
+    line-height: 1.5rem;
+  }
