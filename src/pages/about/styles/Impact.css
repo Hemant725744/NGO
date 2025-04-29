@@ -1,0 +1,71 @@
+/* Impact.css */
+
+.impact-section {
+    padding: 4rem 0; /* Vertical padding */
+    background-color: #d3e4fd; /* Light blue background */
+  }
+  
+  .impact-container {
+    max-width: 80rem; /* Adjust as needed */
+    margin: 0 auto; /* Center horizontally */
+    padding: 0 1rem; /* Horizontal padding */
+  }
+  
+  .impact-header {
+    text-align: center;
+    margin-bottom: 4rem; /* Spacing below header */
+  }
+  
+  .impact-heading {
+    font-size: 2.25rem; /* Larger heading */
+    font-weight: bold;
+    color: #333; /* Darker heading text */
+  }
+  
+  .impact-subheading {
+    font-size: 1.25rem;
+    color: #666; /* Subheading text color */
+    margin-top: 1rem;
+    max-width: 42rem; /* Limit width for readability */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .impact-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* 1 column on small screens */
+    gap: 2rem; /* Spacing between cards */
+  }
+  
+  /* Responsive grid layout */
+  @media (min-width: 640px) {
+    .impact-stats-grid {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens and up */
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .impact-stats-grid {
+      grid-template-columns: repeat(4, 1fr); /* 4 columns on large screens and up */
+    }
+  }
+  
+  .impact-stat-card {
+    background-color: #fff; /* White card background */
+    border-radius: 0.5rem; /* Rounded corners */
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 1.5rem;
+    text-align: center;
+  }
+  
+  .impact-stat-number {
+    font-size: 3rem; /* Large number size */
+    font-weight: bold;
+    color: #9b87f5; /* Purple number color */
+  }
+  
+  .impact-stat-label {
+    font-size: 1.125rem;
+    color: #333; /* Label text color */
+    margin-top: 0.5rem;
+  }
