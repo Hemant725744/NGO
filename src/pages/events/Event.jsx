@@ -6,7 +6,7 @@ import Eventlist from '../events/ComponentsE/Eventlist'
 const Event = () => {
     return (
         <div>
-            <Swipper />
+            {/* <Swipper /> */}
             <Card />
             <Eventlist />
         </div>
