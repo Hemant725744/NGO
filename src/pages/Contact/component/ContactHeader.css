@@ -1,0 +1,17 @@
+/* Import Google Font (Poppins or Montserrat are good choices) */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+.contact-header-container {
+  font-family: "Montserrat", sans-serif; /* Apply the font */
+}
+
+.contact-header-title {
+  font-weight: 700; /* Make the title bold */
+  font-size: 3.5rem; /* Adjust title size */
+}
+
+.contact-header-subtitle {
+  font-size: 1.1rem; /* Adjust subtitle size */
+}
+
+/* Optional: Add any additional styling you need */
