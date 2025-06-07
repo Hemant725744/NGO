@@ -3,43 +3,56 @@ import Slider from 'react-slick';
 import '../styles/Testimonials.css';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import image1 from "../assets/intro.png";
-import image2 from "../assets/sample1.jpg";
-import image3 from "../assets/sample2.jpg";
-import image4 from "../assets/sample3.jpeg";
-import image5 from "../assets/sample4.jpg";
-import image6 from "../assets/sample5.jpeg";
+
+import image1 from "../assets/test1.jpg";
+import image2 from "../assets/test2.jpg";
+import image3 from "../assets/test3.png";
+import image4 from "../assets/test4.jpg";
+import image5 from "../assets/test5.jpg";
+import image6 from "../assets/test6.jpg";
+import image7 from "../assets/test7.jpg";
+import image8 from "../assets/test8.jpg";
 
 const testimonials = [
   {
-    quote: 'Thanks to EcoVision NGO, I can attend school and have a brighter future.',
-    author: 'Amina, Student',
+    quote: 'Hirvankur – For Nature, With Love Hirvankur is dedicated to restoring nature through tree plantation, adoption drives, and water conservation. With 30 Jalmandirs built across Nashik, the team works tirelessly to revive groundwater levels. Being part of this mission is truly rewarding.',
+    author: 'Mrs.Majusha Patki',
+    image: image1,
+  },
+  {
+    quote: 'Hirwanakur Foundation Nashik is a public movement to plant, grow and protect the environment which is going to prove as a milestone in human history.',
+    author: 'Cap.Dr.Rajendra Rajput',
     image: image2,
   },
   {
-    quote: 'The trees we planted have brought back wildlife and beauty to our community.',
-    author: 'James, Volunteer',
+    quote:'Fatima, CommunityHonble Minister Shri Dadasaheb Bhuse praised the initiative of tree conservation by NMC and Hirvankur Foundation Nashik, highlighting the importance of native tree species in Ayurveda and their Treasured benefits for human health. He appreciated the students efforts and suggested that such exhibitions should be organized everywhere to promote environmental conservation Leader',
+    author: 'कॅबिनेट मंत्री श्री दादासाहेब भुसे',
     image: image3,
   },
   {
-    quote: 'Clean water has changed our lives. We are healthier and happier now.',
-    author: 'Fatima, Community Leader',
+    quote: 'Tree Adoption concept by Nashiks Hirwankur Foundation has gained widespread recognition across Maharashtra. Its a valuable step towards mitigating global warming.  Honble Judge Shri D N Chamle, Jamner District Court, expressed confidence that this initiative will spark a revolutionary environmental conservation movement.',
+    author: 'जामनेर जज चामले',
     image: image4,
   },
   {
-    quote: 'Their support for sustainable farming has transformed our village.',
-    author: 'Carlos, Farmer',
+    quote: 'We wholeheartedly appreciate the tree adoption concept. Our team, including legal experts, Pithasan officials, and support staff, will strive together to ensure the success of this noble initiative. Best wishes to each member of "Team Hirvankur"',
+    author: 'Hon. PDJ. Shri.Shrivhand Daulatram Jagmalani',
     image: image5,
   },
   {
-    quote: 'I learned so much about conservation through their workshops.',
-    author: 'Priya, Participant',
+    quote: 'Hirvankurs innovative approach can bring about holistic prosperity. This initiative is excellent, and with their dedication, nature can truly bloom. Wishing them all the best.',
+    author: 'Hon.Shri.M.T.Kharade judge',
     image: image6,
   },
   {
-    quote: 'The eco-friendly initiatives are making a real difference.',
-    author: 'David, Resident',
-    image: image1,
+    quote: 'This concept is truly excellent. Its essential for each of us to acknowledge and fulfill our responsibility towards the environment. Heartfelt congratulations to the entire team at Hirvankur Foundation Nashik on this outstanding initiative.',
+    author: 'Hon.Shri.Amit S. Koshtikar',
+    image: image7,
+  },
+  {
+    quote: 'Team Hirvankurs initiative not only showcases a remarkable commitment to environmental conservation but also fosters a sense of community and civic duty. By involving the judiciary and legal professionals, you have added a valuable dimension to this endeavor, underscoring the importance of collective action in addressing critical issues.',
+    author: 'Hon.Shri.J.O.Wankhede',
+    image: image8,
   },
 ];
 
@@ -72,13 +85,15 @@ const Testimonial = () => {
         {testimonials.map((testimonial, index) => (
           <div key={index} className="testimonial-card-wrapper">
             <div className="testimonial-card">
-            <div className="testimonial-img-wrapper">
-  <img src={testimonial.image} alt={testimonial.author} className="testimonial-img" />
-</div>
-<p className="testimonial-author">- {testimonial.author}</p>
-<div className="testimonial-content">
-  <p className="testimonial-quote">"{testimonial.quote}"</p>
-</div>
+
+              <div className="testimonial-img-wrapper">
+                <img src={testimonial.image} alt={testimonial.author} className="testimonial-img" />
+              </div>
+
+              <div className="testimonial-content">
+                <p className="testimonial-quote">"{testimonial.quote}"</p>
+                <p className="testimonial-author">- {testimonial.author}</p>
+              </div>
 
             </div>
           </div>

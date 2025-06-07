@@ -1,13 +1,70 @@
 .contribute-wrapper {
   display: flex;
-  justify-content: center;
-  align-items: stretch;
-  gap: 40px;
-  background: linear-gradient(135deg, #9966ff63 0%, #fffacd 100%);
+  flex-direction: column; /* stack heading on top */
+  align-items: center;
   padding: 60px 40px;
-  color: #9966ff;
+  background: linear-gradient(135deg, #c9b2ff 0%, #fede99 100%);
+  color: #3B2F5C; /* darker indigo for better contrast */
   font-family: 'Segoe UI', sans-serif;
+}
+
+.contribute-heading {
+  font-size: 3rem;
+  font-weight: 900;
+  color: transparent;
+  background:  linear-gradient(90deg, #3B2F5C 0%, #5B4B8A 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  margin-bottom: 40px;
+  padding-bottom: 10px;
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
+.contribute-heading::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #3B2F5C, #5B4B8A);
+  border-radius: 2px;
+  margin-top: 2px;
+}
+
+.contribute-main {
+  display: flex;
+  gap: 40px;
+  max-width: 1100px;
+  width: 100%;
+  align-items: stretch;
   flex-wrap: wrap;
+}
+
+/* Add a subtle white semi-transparent background behind content */
+.contribute-content {
+  flex: 1;
+  max-width: 500px;
+  background: rgb(255, 249, 200);
+  padding: 20px 25px;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(59, 47, 92, 0.15);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.7s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  color: #3B2F5C; /* ensure text inside content is dark */
+}
+
+.contribute-content.in-viewport {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .contribute-image {
@@ -18,58 +75,32 @@
   background-size: cover;
   background-position: center;
   border-radius: 14px;
-  position: relative;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  padding-bottom: 20px;
 }
 
-.image-heading {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #fff;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
-}
-
-.contribute-content {
-  flex: 1;
-  max-width: 500px;
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.7s ease;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: left;
-}
-
-.contribute-content.in-viewport {
-  opacity: 1;
-  transform: translateY(0);
-}
-
+/* Text styles inside content */
 .text-block {
   margin-bottom: 30px;
 }
 
 .subheading {
   font-size: 1rem;
-  color: #9966ff;
+  color: #5B4B8A; /* slightly lighter indigo */
   margin-bottom: 6px;
+  font-weight: 600;
 }
 
 .main-tagline {
   font-size: 1.4rem;
-  font-weight: 500;
-  color: #9966ff;
+  font-weight: 700;
+  color: #3B2F5C;
 }
 
 .guidelines-title {
   font-size: 1.1rem;
   font-weight: bold;
   margin-bottom: 12px;
+  color: #4B3F72;
 }
 
 .guidelines-list {
@@ -84,18 +115,18 @@
   align-items: center;
   font-size: 1rem;
   padding: 10px 0;
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid #bbb;
+  color: #3B2F5C;
 }
 
 .guidelines-list svg {
-  color: #9966ff;
+  color: #5B4B8A;
   font-size: 1.2rem;
 }
 
 @media (max-width: 768px) {
-  .contribute-wrapper {
+  .contribute-main {
     flex-direction: column;
-    padding: 40px 20px;
   }
 
   .contribute-image,
@@ -104,8 +135,9 @@
     width: 100%;
   }
 
-  .image-heading {
-    font-size: 1.6rem;
+  .contribute-heading {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
   }
 
   .main-tagline {

@@ -1,69 +1,92 @@
 .intro-section {
-    background-color: #d3e4fd;
-    padding: 80px 20px;
-  }
-  
+  background-color: #d3e4fd;
+  padding: 80px 20px;
+}
+
+.intro-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px; /* Add horizontal padding */
+}
+
+.intro-content {
+  flex: 1 1 500px;
+  min-width: 280px;
+  padding-right: 20px; /* Add right padding on desktop */
+}
+
+.intro-content h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #333;
+  line-height: 1.2;
+}
+
+.highlight-purple {
+  color: #7e69ab;
+}
+
+.highlight-lavender {
+  color: #9b87f5;
+}
+
+.intro-content p {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #555;
+  max-width: 600px;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.intro-video {
+  flex: 1 1 500px;
+  min-width: 280px;
+  max-width: 100%;
+  padding-left: 20px; /* Add left padding on desktop */
+}
+
+.intro-video video {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
   .intro-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 20px; /* consistent padding */
   }
-  
+
   .intro-content {
-    flex: 1 1 500px;
+    flex: none;
+    padding-right: 0;
+    padding-left: 0;
   }
-  
+
   .intro-content h1 {
-    font-size: 2.5rem;
-    font-weight: 800;
-    color: #333;
-    line-height: 1.2;
+    font-size: 2rem;
   }
-  
-  .highlight-purple {
-    color: #7e69ab;
-  }
-  
-  .highlight-lavender {
-    color: #9b87f5;
-  }
-  
+
   .intro-content p {
-    margin-top: 20px;
-    font-size: 1.2rem;
-    color: #555;
-    max-width: 600px;
+    font-size: 1rem;
+    max-width: 100%;
   }
-  
-  .intro-image {
-    flex: 1 1 500px;
-  }
-  
-  .intro-image img {
+
+  .intro-video {
+    flex: none;
     width: 100%;
-    height: auto;
-    border-radius: 12px;
-    object-fit: cover;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    margin-top: 30px; /* More space between content & video */
+    padding-left: 0;
   }
-  
-  /* Responsive */
-  @media (max-width: 768px) {
-    .intro-container {
-      flex-direction: column;
-      text-align: center;
-    }
-  
-    .intro-content h1 {
-      font-size: 2rem;
-    }
-  
-    .intro-content p {
-      font-size: 1rem;
-    }
-  }
-  
+}
