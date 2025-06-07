@@ -1,0 +1,71 @@
+/* Impact.css */
+
+.impact-section {
+  padding: 4rem 0;
+  background-color: #d3e4fd;
+}
+
+.impact-container {
+  max-width: 100rem; /* Increased width */
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.impact-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.impact-heading {
+  font-size: 2.25rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.impact-subheading {
+  font-size: 1.25rem;
+  color: #666;
+  margin-top: 1rem;
+  max-width: 42rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.impact-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+}
+
+@media (min-width: 640px) {
+  .impact-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .impact-stats-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.impact-stat-card {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  text-align: center;
+  min-width: 12rem; /* Prevent too small cards */
+}
+
+.impact-stat-number {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #9b87f5;
+}
+
+.impact-stat-label {
+  font-size: 1.125rem;
+  color: #333;
+  margin-top: 0.5rem;
+}

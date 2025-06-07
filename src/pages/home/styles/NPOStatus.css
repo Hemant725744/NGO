@@ -1,0 +1,37 @@
+.npo-status-container {
+  font-family: sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+.map-container {
+  position: relative;
+  width: 800px;
+  margin: auto;
+}
+
+svg {
+  border: 1px solid #ddd;
+}
+
+.state {
+  fill: #FFC300;
+  stroke: #555;
+  stroke-width: 1px;
+  cursor: pointer;
+}
+
+.state:hover {
+  fill: #FF5733;
+}
+
+.state-popup {
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 8px;
+  top: 50px;
+  left: 50px;
+  z-index: 10;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
