@@ -1,0 +1,328 @@
+/* Custom Fonnt  */
+
+/* Custom CSS */
+:root {
+  --primary-green: #144226;
+  --accent-teal: #2a9d8f;
+  --soft-white: #f8f9fa;
+  --dark-green: #0d2e1a;
+  --glass-bg: rgba(255, 255, 255, 0.1);
+}
+
+/* Base Styles */
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Apply background to the main container */
+.card-background {
+  background-color: var(--pista-green); /* Pista green background */
+  min-height: 100vh; /* Ensure full viewport height */
+  padding-top: 40px; /* Add some padding at the top */
+  padding-bottom: 40px; /* Add some padding at the bottom */
+  background-image: url("/5d31ba71-319b-49ac-8031-2055a707c113.jpeg"); /* Add your background image path here */
+  background-size: cover; /* Cover the entire container */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-attachment: fixed; /* Keep the background fixed during scroll */
+}
+
+/* Title Section */
+.ngo-title {
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: var(--primary-green);
+  position: relative;
+  padding-bottom: 1.5rem;
+  font-family: "Green.otf";
+}
+
+.ngo-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent-teal), var(--primary-green));
+  border-radius: 2px;
+}
+
+.subtitle {
+  color: #5a7d5c !important;
+  font-size: 1.1rem;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+/* Event Cards */
+.event-card {
+  border-radius: 24px;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  box-shadow: 0 12px 40px 8px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  background: var(--soft-white);
+  cursor: pointer;
+  transform-style: preserve-3d;
+}
+
+.event-card:hover {
+  transform: translateY(-8px) rotateX(2deg) rotateY(2deg);
+  box-shadow: 0 25px 60px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* Image Section */
+.image-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px 24px 0 0;
+  height: 280px;
+}
+
+.image-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(20, 66, 38, 0) 0%,
+    rgba(20, 66, 38, 0.3) 100%
+  );
+  z-index: 1;
+}
+
+.image-wrapper img {
+  transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Glassmorphism Date Badge */
+.date-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  backdrop-filter: blur(12px);
+  background: var(--glass-bg);
+  border-radius: 12px;
+  padding: 10px 18px;
+  z-index: 2;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+}
+
+.date-badge span {
+  color: var(--soft-white);
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+}
+
+/* Card Content */
+.card-body {
+  padding: 1.75rem;
+  background: linear-gradient(45deg, var(--soft-white), #ffffff);
+}
+
+.card-title {
+  color: var(--dark-green) !important;
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.title-underline {
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.title-underline::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: var(--accent-teal);
+  transition: width 0.3s ease;
+}
+
+.event-card:hover .title-underline::after {
+  width: 100%;
+}
+
+.location {
+  color: var(--primary-green) !important;
+  font-size: 0.95rem;
+}
+
+.card-text {
+  color: #4a4a4a;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* Buttons */
+.btn-outline-primary {
+  border: 2px solid var(--primary-green);
+  color: var(--primary-green);
+  border-radius: 8px;
+  padding: 0.5rem 1.25rem;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+  background: var(--primary-green);
+  color: var(--soft-white) !important;
+}
+
+.btn-gradient {
+  background: linear-gradient(135deg, var(--primary-green), var(--accent-teal));
+  color: var(--soft-white) !important;
+  border-radius: 8px;
+  padding: 0.5rem 1.5rem;
+  position: relative;
+  overflow: hidden;
+  border: none;
+  transition: transform 0.3s ease;
+}
+
+.btn-gradient::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent 25%,
+    rgba(255, 255, 255, 0.1) 50%,
+    transparent 75%
+  );
+  animation: shine 3s infinite;
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(-100%) rotate(45deg);
+  }
+  100% {
+    transform: translateX(100%) rotate(45deg);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .ngo-title {
+    font-size: 2rem;
+  }
+
+  .image-wrapper {
+    height: 220px;
+  }
+
+  .card-body {
+    padding: 1.25rem;
+  }
+
+  .btn {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+}
+
+.contact-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8fff9 0%, #f0fdf4 100%);
+  padding: 6rem 0;
+  font-family: "Inter", sans-serif;
+}
+
+.contact-title {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  color: #1a3c21;
+  margin-bottom: 4rem !important;
+}
+
+.contact-title span {
+  position: relative;
+  background: linear-gradient(45deg, #2e7d32, #4caf50);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.typing-cursor {
+  color: #4caf50;
+  animation: blinkCursor 1s infinite;
+}
+
+@keyframes blinkCursor {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.info-card {
+  border: 1px solid rgba(46, 125, 50, 0.1);
+  border-radius: 1.5rem;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.info-card:hover {
+  transform: translateY(-0.5rem);
+  box-shadow: 0 20px 40px -10px rgba(46, 125, 50, 0.15);
+}
+
+.icon-container {
+  width: 4rem;
+  height: 4rem;
+  background: linear-gradient(135deg, #2e7d32 0%, #4caf50 100%);
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.info-card:hover .icon-container {
+  transform: rotate(15deg) scale(1.1);
+  border-radius: 0.75rem;
+}
+
+.contact-form-card {
+  background: white;
+  border-radius: 1.5rem;
+  box-shadow: 0 20px 40px -10px rgba(46, 125, 50, 0.15);
+  overflow: hidden;
+}
+
+.form-input {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 0.75rem;
+  transition: all 0.3s ease;
+  background: transparent;
+  position: relative;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #4caf50;
+  box-shadow: 0;
+}

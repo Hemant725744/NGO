@@ -1,0 +1,69 @@
+/* Add animation for fade-in effect */
+.animate-fadeIn {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Custom styles for team member cards */
+  .team-member-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .team-member-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .team-member-photo {
+    width: 150px; /* Set a fixed width */
+    height: 150px; /* Set a fixed height */
+    object-fit: cover; /* Maintain aspect ratio and crop if necessary */
+    border-radius: 50%; /* Optional: Make the images circular */
+    display: block;
+    margin: 0 auto; /* Center the image */
+  }
+  
+  .team-member-name {
+    font-weight: 600;
+    font-size: 1.25rem;
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+  
+  .team-member-role {
+    font-size: 0.9rem;
+    color: #6c757d;
+    text-align: center;
+  }
+  
+  /* Modal customization */
+  .team-member-modal {
+    background-color: #fff;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .team-member-modal img {
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .team-member-modal h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  
+  .team-member-modal p {
+    font-size: 1rem;
+    color: #6c757d;
+  }

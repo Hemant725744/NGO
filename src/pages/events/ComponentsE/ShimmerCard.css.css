@@ -1,0 +1,71 @@
+.shimmer-card {
+  background-color: #f0f0f0;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 12px 40px 8px rgba(0, 0, 0, 0.08);
+  height: 400px; /* Adjust as needed */
+  display: flex;
+  flex-direction: column;
+}
+
+.shimmer-image {
+  height: 200px; /* Adjust as needed */
+  background: linear-gradient(90deg, #e0e0e0 25%, #f8f8f8 50%, #e0e0e0 75%);
+  animation: shimmer 1.5s infinite linear;
+}
+
+.shimmer-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.shimmer-line {
+  background: linear-gradient(90deg, #e0e0e0 25%, #f8f8f8 50%, #e0e0e0 75%);
+  animation: shimmer 1.5s infinite linear;
+  border-radius: 4px;
+}
+
+.shimmer-line.title {
+  height: 1.2rem;
+  width: 70%;
+}
+
+.shimmer-line.location {
+  height: 1rem;
+  width: 50%;
+}
+
+.shimmer-line.description-short {
+  height: 0.8rem;
+  width: 90%;
+}
+
+.shimmer-line.description-medium {
+  height: 0.8rem;
+  width: 60%;
+}
+
+.shimmer-buttons {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: auto;
+}
+
+.shimmer-button {
+  background: linear-gradient(90deg, #e0e0e0 25%, #f8f8f8 50%, #e0e0e0 75%);
+  animation: shimmer 1.5s infinite linear;
+  border-radius: 8px;
+  height: 2rem;
+  width: 45%;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: 200px 0;
+  }
+}

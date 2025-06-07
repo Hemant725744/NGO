@@ -1,0 +1,163 @@
+/* Section background */
+
+/* Body section heading */
+.body-section-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #1e293b; /* dark slate */
+}
+
+/* Section buttons row */
+.section-buttons-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.people-section {
+  padding: 2.5rem 1.5rem;
+  max-width: 100%;
+  margin: 0 auto;
+  background: linear-gradient(to bottom, #e0f7e9, #f0fff4);
+  text-align: center;
+}
+
+/* Title with gradient text */
+.people-section h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  letter-spacing: 0.05em;
+  background: linear-gradient(90deg, #ff6a00 0%, #ee0979 50%, #4a00e0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Section buttons row */
+.section-buttons-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* Section toggle buttons */
+.section-toggle-btn {
+  background: linear-gradient(90deg, #2563eb, #1e40af);
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 0.75rem;
+  transition: transform 0.3s ease, background 0.3s ease;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.section-toggle-btn:hover {
+  transform: scale(1.05);
+}
+
+.section-toggle-btn.active {
+  background: linear-gradient(90deg, #059669, #047857);
+  color: #fff;
+}
+
+/* People grid layout */
+.people-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+@media (max-width: 1024px) {
+  .people-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .people-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .people-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Card design */
+.member-card {
+  position: relative;
+  height: 350px;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  cursor: pointer;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  background-color: #ffffff;
+  border: 2px solid #d1fae5;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.member-card:hover {
+  background-color: #c6f6d5;
+  transform: scale(1.03);
+  box-shadow: 0 15px 25px rgba(34, 197, 94, 0.25);
+}
+
+/* Card image */
+.member-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Hover overlay */
+.member-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.75);
+  padding: 1rem;
+  transform: translateY(100%);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  text-align: center;
+}
+
+.member-card:hover .member-overlay {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Name and role */
+.member-name {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #fff;
+  margin-bottom: 0.3rem;
+}
+
+.member-role {
+  font-size: 0.95rem;
+  color: #ddd;
+}
