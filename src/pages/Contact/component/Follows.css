@@ -1,76 +1,173 @@
-.follows-container {
-  background: #f8fff9;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  position: relative;
-  overflow: hidden;
+/* Follows.css */
+.follows-section { /* Changed from .follows-container to match the section className */
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    /* min-height: 100vh; Removed, as it might interfere with normal page flow */
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding: 4rem 0;
+}
+
+.background-patterns {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.bg-pattern {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #27ae60 0%, transparent 70%);
+    filter: blur(15px);
+    opacity: 0.05;
 }
 
 .section-title {
-  font-size: 2.5rem;
-  color: #2c3e50;
-  font-weight: 600;
-  letter-spacing: -0.5px;
-  position: relative;
-  padding-bottom: 1rem;
+    font-size: 2.8rem;
+    color: #212529;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    position: relative;
+    padding-bottom: 0.5rem;
+    z-index: 1;
 }
 
 .section-title::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80px;
-  height: 3px;
-  background: #27ae60;
-  border-radius: 2px;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #27ae60, #2ecc71);
+    border-radius: 4px;
+}
+
+.section-subtitle {
+    color: #6c757d;
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
 }
 
 .social-card {
-  background: white;
-  border-radius: 15px;
-  padding: 2rem 1rem;
-  text-decoration: none;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.04), 0 1px 3px rgba(0, 0, 0, 0.08);
-  position: relative;
-  overflow: hidden;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 18px;
+    padding: 2.5rem 1rem;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow:
+        0 4px 6px rgba(0, 0, 0, 0.03),
+        0 1px 2px rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transform: translateY(0);
+    height: 100%;
 }
 
 .social-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.08);
+    transform: translateY(-10px);
+    box-shadow:
+        0 25px 50px -12px rgba(0, 0, 0, 0.15),
+        0 10px 20px -5px rgba(0, 0, 0, 0.08);
 }
 
 .icon-wrapper {
-  font-size: 3.5rem;
-  transition: all 0.3s ease;
+    /* Removed, as the direct `icon` class from the inline styles is now used */
+    /* font-size: 3.5rem;
+    transition: all 0.4s ease;
+    margin-bottom: 1.2rem;
+    position: relative;
+    z-index: 2; */
+}
+
+/* Ensure the inline style's icon class is targeted for hover effects */
+.social-card:hover .icon {
+    transform: scale(1.15) translateY(-8px);
+    filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.15));
 }
 
 .social-name {
-  color: #2c3e50;
-  font-size: 1.1rem;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  transition: color 0.3s ease;
+    color: #343a40;
+    font-size: 1.15rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
 }
 
 .social-card:hover .social-name {
-  color: #27ae60;
+    color: #27ae60;
+    letter-spacing: 0.8px;
+}
+
+.hover-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(245, 245, 245, 0.9) 100%);
+    z-index: 1;
+    opacity: 1;
+    transition: opacity 0.4s ease;
+}
+
+.social-card:hover .hover-effect {
+    opacity: 0.8;
 }
 
 @media (min-width: 768px) {
-  .section-title {
-    font-size: 3.5rem;
-  }
+    .section-title {
+        font-size: 3.5rem;
+    }
 
-  .icon-wrapper {
-    font-size: 4.5rem;
-  }
+    .section-subtitle {
+        font-size: 1.3rem;
+    }
 
-  .social-name {
-    font-size: 1.25rem;
-  }
+    .social-card {
+        padding: 3rem 1rem;
+    }
+
+    /* Target the inline style's icon class here too */
+    .social-card .icon {
+        font-size: 4.5rem;
+    }
+
+    .social-name {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .section-title {
+        font-size: 2.3rem;
+    }
+
+    .social-card {
+        padding: 1.8rem 1rem;
+    }
+
+    /* Target the inline style's icon class here too */
+    .social-card .icon {
+        font-size: 3rem;
+    }
 }

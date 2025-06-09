@@ -4,6 +4,8 @@ import Mission from './components/Mission'
 import People from './components/People'
 import Impact from './components/Impact'
 import Sponsors from './components/Sponsers'
+import WhatsAppButton from '../Whatsapp/Whatsapp'
+import Footer from '../Footer/Footer'
 const About = () => {
     return (
         <div>
@@ -12,6 +14,8 @@ const About = () => {
             <Impact/>
             <People/>
             <Sponsors/>
+            <WhatsAppButton/>
+            <Footer/>
 
             
         </div>

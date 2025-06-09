@@ -90,7 +90,7 @@ const GetInTouch = () => {
     }, []);
 
     const handleLocationClick = () => {
-        const address = "1600+Amphitheatre+Parkway,+Mountain+View,+CA";
+        const address = `20°00'26.0"N 73°47'23.5"E`
         window.open(`https://www.google.com/maps/place/${address}`, '_blank');
     };
 
@@ -147,10 +147,14 @@ const GetInTouch = () => {
                         >
                             {index === 0 && (
                                 <div className="contact-content">
-                                    <FaPhone className="contact-icon pulse" />
+                                    <div className="phone-icon-container">
+                                        <FaPhone className="contact-icon ring" />
+                                        <div className="phone-ring"></div>
+                                        <div className="phone-ring-delay"></div>
+                                    </div>
                                     <h3>Phone Support</h3>
-                                    <a href="tel:+911234567890" className="contact-info">
-                                        +91 12345 67890
+                                    <a href="tel: 9156304050" className="contact-info">
+                                      9156304050
                                         <span className="hover-line"></span>
                                     </a>
                                 </div>
@@ -159,8 +163,8 @@ const GetInTouch = () => {
                                 <div className="contact-content">
                                     <FaEnvelope className="contact-icon float" />
                                     <h3>Email Us</h3>
-                                    <a href="mailto:demo@example.com" className="contact-info">
-                                        demo@example.com
+                                    <a href="mailto: hirvankurindia@gmail.com" className="contact-info">
+                                        hirvankurindia@gmail.com
                                         <span className="hover-line"></span>
                                     </a>
                                 </div>
@@ -173,7 +177,7 @@ const GetInTouch = () => {
                                     </div>
                                     <h3>Our Location</h3>
                                     <div className="contact-info">
-                                        Mountain View, CA
+                                        Ravivar Karanja 
                                         <FaExternalLinkAlt className="ms-2 link-icon" />
                                     </div>
                                 </div>

@@ -1,145 +1,275 @@
-.footer-glass {
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(12px);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  position: relative;
-  overflow: hidden;
+/* Footer.css - Light Theme */
+.footer-container {
+    position: relative;
+    background: linear-gradient(135deg, #e0f2f7 0%, #c1e4ee 100%); /* Lighter blue-green gradient */
+    color: #333; /* Darker text for contrast */
+    padding: 5rem 2rem 2rem;
+    overflow: hidden;
+    font-family: "Poppins", "Segoe UI", sans-serif;
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
 }
 
-.footer-gradient {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    45deg,
-    rgba(106, 17, 203, 0.1),
-    rgba(37, 117, 252, 0.1)
-  );
-  z-index: -1;
+.leaf-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0.35; /* Slightly more visible for light theme */
+    z-index: 1;
 }
 
-.footer-heading {
-  color: #e0e0e0;
-  font-size: 1.1rem;
-  font-weight: 600;
-  letter-spacing: 0.5px;
+.leaf {
+    position: absolute;
+    color: #66bb6a; /* A vibrant green for leaves */
+    z-index: 1;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.08));
 }
 
-.footer-text {
-  color: #a0a0a0;
-  line-height: 1.6;
-  font-size: 0.95rem;
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
 }
 
-.footer-links {
-  list-style: none;
-  padding-left: 0;
+.footer-section {
+    display: flex;
+    flex-direction: column;
 }
 
-.footer-links li {
-  margin-bottom: 0.8rem;
+.logo-container {
+    margin-bottom: 1.8rem;
 }
 
-.footer-links a {
-  color: #b0b0b0;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  position: relative;
-  padding-bottom: 2px;
+.logo {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #2e7d32; /* Darker green for the logo */
+    letter-spacing: -0.5px;
+    background: linear-gradient(to right, #4caf50, #8bc34a); /* Green gradient for text clip */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1;
 }
 
-.footer-links a::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 1px;
-  background: #6a11cb;
-  transition: width 0.3s ease;
+.tagline {
+    font-size: 1.1rem;
+    color: #4CAF50; /* Primary green color */
+    font-weight: 500;
+    margin-top: 0.5rem;
 }
 
-.footer-links a:hover {
-  color: #ffffff;
+.mission {
+    color: #555; /* Slightly darker body text */
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    max-width: 380px;
+    font-size: 1.05rem;
 }
 
-.footer-links a:hover::after {
-  width: 100%;
-}
-
-.social-links {
-  display: flex;
-  gap: 1.2rem;
+/* PURE SOCIAL ICONS - NO BACKGROUND, NO BORDER, NO SHADOW */
+.social-container {
+    display: flex;
+    gap: 2.2rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
 }
 
 .social-icon {
-  color: #b0b0b0;
-  font-size: 1.4rem;
-  transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    width: auto;
+    height: auto;
+    border-radius: 0;
+    transition: all 0.3s ease;
 }
 
 .social-icon:hover {
-  color: #6a11cb;
-  transform: translateY(-3px);
+    filter: brightness(1.1) drop-shadow(0 0 8px currentColor); /* Subtle glow on hover */
 }
 
-.newsletter-form input {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: #ffffff;
-  border-radius: 8px;
+/* LINK STYLES */
+.links-section h4 {
+    font-size: 1.3rem;
+    margin-bottom: 1.8rem;
+    color: #2e7d32; /* Dark green for headings */
+    position: relative;
+    padding-bottom: 0.8rem;
+    font-weight: 600;
 }
 
-.newsletter-form input:focus {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(106, 17, 203, 0.5);
-  box-shadow: none;
+.links-section h4::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 45px;
+    height: 3px;
+    background: linear-gradient(to right, #66bb6a, #4caf50); /* Green highlight */
+    border-radius: 2px;
 }
 
-.btn-gradient {
-  background: linear-gradient(45deg, #6a11cb, #2575fc);
-  border: none;
-  color: white;
-  border-radius: 8px;
-  transition: all 0.3s ease;
+.links-section ul {
+    list-style: none;
+    padding: 0;
 }
 
-.btn-gradient:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(106, 17, 203, 0.3);
+.links-section li {
+    margin-bottom: 1rem;
 }
 
-.footer-divider {
-  height: 1px;
-  background: rgba(255, 255, 255, 0.1);
+.links-section a {
+    color: #555; /* Darker link text */
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    font-size: 1.05rem;
+    padding: 0.4rem 0;
+}
+
+.link-icon {
+    margin-right: 0.8rem;
+    color: #4caf50; /* Green arrow */
+    font-weight: 700;
+    transition: transform 0.3s ease;
+}
+
+.links-section a:hover .link-icon {
+    transform: translateX(5px);
+}
+
+.links-section a:hover {
+    color: #2e7d32; /* Darker green on hover */
+}
+
+/* CONTACT SECTION */
+.contact-section h4 {
+    font-size: 1.3rem;
+    margin-bottom: 1.8rem;
+    color: #2e7d32; /* Dark green for headings */
+    position: relative;
+    padding-bottom: 0.8rem;
+    font-weight: 600;
+}
+
+.contact-section h4::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 45px;
+    height: 3px;
+    background: linear-gradient(to right, #66bb6a, #4caf50); /* Green highlight */
+    border-radius: 2px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.4rem;
+    color: #555; /* Darker contact info text */
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+.contact-icon {
+    margin-right: 1.2rem;
+    color: #4caf50; /* Green icon */
+}
+
+.copyright {
+    border-top: 1px solid rgba(0, 0, 0, 0.1); /* Lighter border for light theme */
+    padding-top: 2.2rem;
+    margin-top: 4rem;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.copyright-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.copyright p {
+    color: #777; /* Softer color for copyright text */
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
 }
 
 .legal-links {
-  display: flex;
-  gap: 1.5rem;
-  margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
 }
 
-.copyright-text {
-  color: #808080;
-  font-size: 0.9rem;
-  margin-bottom: 0;
+.legal-links a {
+    color: #555; /* Darker legal link text */
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.legal-links a:hover {
+    color: #2e7d32; /* Darker green on hover */
+    text-decoration: underline;
+}
+
+.legal-links span {
+    color: #777; /* Softer color for separators */
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 @media (max-width: 768px) {
-  .footer-links {
-    margin-bottom: 2rem;
-  }
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
 
-  .legal-links {
-    flex-direction: column;
-    gap: 0.5rem;
-    margin-bottom: 1rem;
-  }
+    .social-container {
+        gap: 1.5rem;
+        justify-content: center;
+    }
 
-  .copyright-text {
-    text-align: left !important;
-  }
+    .footer-section,
+    .links-section,
+    .contact-section {
+        margin-bottom: 3rem;
+        text-align: center;
+    }
+
+    .logo,
+    .tagline,
+    .mission {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .links-section ul {
+        display: inline-block;
+        text-align: left;
+    }
+
+    .contact-info {
+        justify-content: center;
+    }
 }

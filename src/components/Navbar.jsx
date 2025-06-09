@@ -94,8 +94,7 @@ const Navbar = () => {
                 className={({ isActive }) =>
                   `btn btn-contribute ${isActive ? 'active' : ''}`
                 }
-                onMouseEnter={handleHover}
-                onMouseLeave={handleHoverEnd}
+                // Removed hover handlers here
               >
                 Contribute
               </NavLink>

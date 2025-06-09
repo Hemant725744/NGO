@@ -4,6 +4,7 @@ import NPOStatus from "./components/NPOstatus";
 import Layout from "./components/layout";
 import Contri from "./components/Contribute";
 import Testimonial from "./components/Testimonial";
+import WhatsAppButton from "../Whatsapp/Whatsapp";
 import Footer from "../Footer/Footer"
 function Home() {
     return (
@@ -14,6 +15,7 @@ function Home() {
             <Contri />
             <Testimonial/>
             <Footer/>
+            <WhatsAppButton/>
           
 
         </div>
