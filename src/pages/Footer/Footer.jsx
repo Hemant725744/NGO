@@ -23,11 +23,11 @@ const Footer = () => {
     };
 
     const socialLinks = [
-        { icon: <FiInstagram size={36} />, url: '#', color: '#E1306C', label: 'Instagram' },
-        { icon: <FiYoutube size={36} />, url: '#', color: '#FF0000', label: 'YouTube' },
-        { icon: <FiTwitter size={36} />, url: '#', color: '#1DA1F2', label: 'Twitter' },
+        { icon: <FiInstagram size={36} />, url: 'https://www.instagram.com/hirvankur_foundation_nsk?igsh=MXBid3l4aXhkdmEyNw==', color: '#E1306C', label: 'Instagram' },
+        { icon: <FiYoutube size={36} />, url: 'https://www.youtube.com/@hirvankurfoundationnashiki4930', color: '#FF0000', label: 'YouTube' },
+     
         { icon: <FiLinkedin size={36} />, url: '#', color: '#0077B5', label: 'LinkedIn' },
-        { icon: <FiFacebook size={36} />, url: '#', color: '#1877F2', label: 'Facebook' }
+        { icon: <FiFacebook size={36} />, url: 'https://www.facebook.com/share/1Cgcy5PpZM/', color: '#1877F2', label: 'Facebook' }
     ];
 
     const footerLinks = [
@@ -88,8 +88,8 @@ const Footer = () => {
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.2, duration: 0.5 }}
                     >
-                        Dedicated to restoring Earth's green cover through sustainable plantation
-                        initiatives and environmental education.
+                      <b>  Dedicated to restoring Earth's green cover through sustainable plantation
+                        initiatives and environmental education.</b>
                     </motion.p>
 
                     <div className="social-container">
@@ -116,7 +116,7 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div className="links-container">
+                <div className="links-container  "  style={{fontWeight: 'bold'}}>
                     {footerLinks.map((section, index) => (
                         <motion.div
                             key={index}

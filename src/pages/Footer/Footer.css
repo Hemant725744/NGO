@@ -1,7 +1,7 @@
 /* Footer.css - Light Theme */
 .footer-container {
     position: relative;
-    background: linear-gradient(135deg, #e0f2f7 0%, #c1e4ee 100%); /* Lighter blue-green gradient */
+    background: linear-gradient(135deg, #a9fdf9 0%, #ffffff 100%); /* Lighter blue-green gradient */
     color: #333; /* Darker text for contrast */
     padding: 5rem 2rem 2rem;
     overflow: hidden;
@@ -267,9 +267,20 @@
     .links-section ul {
         display: inline-block;
         text-align: left;
+        font-weight: bolder;
     }
+
+
 
     .contact-info {
         justify-content: center;
     }
+
+
+.links-container{
+
+font-weight: bolder;
 }
+
+}
+
