@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/Layout.css';
-import { motion, AnimatePresence } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
 
 import image1 from "../assets/sample1.1.jpeg";
 import image2 from "../assets/sample1.2.jpeg";
-import image3 from "../assets/sample2.1.jpg";
-import image4 from "../assets/sample2.2.jpg";
+import image3 from "../assets/sample2.1.JPG";
+import image4 from "../assets/sample2.2.JPG";
 import image5 from "../assets/sample3.1.jpeg";
 import image6 from "../assets/sample3.2.jpeg";
 import image7 from "../assets/sample4.1.jpeg";
