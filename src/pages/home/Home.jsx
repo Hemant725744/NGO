@@ -1,7 +1,7 @@
 import React from "react";
 import Intro from "./components/Intro";
 
-import Layout from "./components/layout";
+import Layout from "./components/Layout";
 import Contri from "./components/Contribute";
 import Testimonial from "./components/Testimonial";
 import WhatsAppButton from "../Whatsapp/Whatsapp";
