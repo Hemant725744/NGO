@@ -3,7 +3,7 @@ import { Container, Row } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTwitter, faVimeo, faFacebook } from "@fortawesome/free-brands-svg-icons";
 import PropTypes from "prop-types";
-import "./TeamPage.css";
+import "./Teampage.css";
 
 const teamMembers = [
     {
