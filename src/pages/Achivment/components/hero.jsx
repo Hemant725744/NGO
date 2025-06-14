@@ -7,11 +7,32 @@ import { gsap } from 'gsap';
 import { Loader } from 'react-feather';
 const stats = [
     {
-        icon: <Droplets className="text-primary" style={{ height: "3rem", width: "3rem", border: "none" }} />,
-        title: "Jal Mandir",
-        value: "1.6 Crore+",
-        description: '"Jal Mandir" (Percolation Pits): 35+ pits constructed for water conservation. So Catch The Rain now 1.6 crore (16 million) liters of water saved per year."',
-        bgImage: "https://images.pexels.com/photos/66346/pexels-photo-66346.jpeg?auto=compress&cs=tinysrgb&w=600",
+        icon: <BookOpen className="text-black" style={{ height: "3rem", width: "3rem", border: "none" }} />,
+        title: "Students Reached",
+        value: "1.5 Million",
+        description: ' With the concept of "विद्यार्थी दशेतून हरितसंस्कार" ("Green Impressions through Student Age"), we have connected 3,000 schools and over 15 lakh (1.5 million) students, building a revolutionary movement.',
+        bgImage: "https://images.pexels.com/photos/3401403/pexels-photo-3401403.jpeg?auto=compress&cs=tinysrgb&w=600",
+    },
+    {
+        icon: <TreePine className="text-success" style={{ height: "3rem", width: "3rem", border: "none" }} />,
+        title: "Trees Planted",
+        value: "5.4 lakh",
+        description: '5.4 lakh (540,000) trees with the "Balak Palak" initiative.',
+        bgImage: "https://images.pexels.com/photos/1770809/pexels-photo-1770809.jpeg?auto=compress&cs=tinysrgb&w=600",
+    },
+    {
+        icon: <LoaderPinwheel className="text-secondary" style={{ height: "3rem", width: "3rem", border: "none" }} />,
+        title: "Seed Ball Making",
+        value: "1.8 lakh",
+        description: "1.8 lakh (180,000) seed balls created and distributed.",
+        bgImage: "https://images.pexels.com/photos/41959/food-grains-bread-wheat-cereals-41959.jpeg?auto=compress&cs=tinysrgb&w=600",
+    },
+    {
+        icon: <Tractor className="text-warning" style={{ height: "3rem", width: "3rem", border: "none" }} />,
+        title: "Organic Farming",
+        value: "50,000+",
+        description: 'विषमुक्त शेती"  Organic Conversion of Land: 350+ acres (141,6401 sq. mt) converted to organic farming.',
+        bgImage: "https://images.pexels.com/photos/169523/pexels-photo-169523.jpeg?auto=compress&cs=tinysrgb&w=600",
     },
     {
         icon: <Leaf className="text-success" style={{ height: "3rem", width: "3rem", border: "none" }} />,
@@ -22,35 +43,14 @@ const stats = [
         bgImage: "https://images.pexels.com/photos/957024/forest-trees-perspective-bright-957024.jpeg?auto=compress&cs=tinysrgb&w=600",
     },
     {
-        icon: <Tractor className="text-warning" style={{ height: "3rem", width: "3rem", border: "none" }} />,
-        title: "Organic Farming",
-        value: "50,000+",
-        description: 'विषमुक्त शेती"  Organic Conversion of Land: 350+ acres (141,6401 sq. mt) converted to organic farming.',
-        bgImage: "https://images.pexels.com/photos/169523/pexels-photo-169523.jpeg?auto=compress&cs=tinysrgb&w=600",
-    },
-    {
-        icon: <LoaderPinwheel className="text-secondary" style={{ height: "3rem", width: "3rem", border: "none" }} />,
-        title: "Seed Ball Making",
-        value: "1.8 lakh",
-        description: "1.8 lakh (180,000) seed balls created and distributed.",
-        bgImage: "https://images.pexels.com/photos/41959/food-grains-bread-wheat-cereals-41959.jpeg?auto=compress&cs=tinysrgb&w=600",
+        icon: <Droplets className="text-primary" style={{ height: "3rem", width: "3rem", border: "none" }} />,
+        title: "Jal Mandir",
+        value: "1.6 Crore+",
+        description: '"Jal Mandir" (Percolation Pits): 35+ pits constructed for water conservation. So Catch The Rain now 1.6 crore (16 million) liters of water saved per year."',
+        bgImage: "https://images.pexels.com/photos/66346/pexels-photo-66346.jpeg?auto=compress&cs=tinysrgb&w=600",
     },
 
-    {
-        icon: <TreePine className="text-success" style={{ height: "3rem", width: "3rem", border: "none" }} />,
-        title: "Trees Planted",
-        value: "5.4 lakh",
-        description: '5.4 lakh (540,000) trees with the "Balak Palak" initiative.',
-        bgImage: "https://images.pexels.com/photos/1770809/pexels-photo-1770809.jpeg?auto=compress&cs=tinysrgb&w=600",
-    },
 
-    {
-        icon: <BookOpen className="text-black" style={{ height: "3rem", width: "3rem", border: "none" }} />,
-        title: "Students Reached",
-        value: "1.5 Million",
-        description: ' With the concept of "विद्यार्थी दशेतून हरितसंस्कार" ("Green Impressions through Student Age"), we have connected 3,000 schools and over 15 lakh (1.5 million) students, building a revolutionary movement.',
-        bgImage: "https://images.pexels.com/photos/3401403/pexels-photo-3401403.jpeg?auto=compress&cs=tinysrgb&w=600",
-    },
 
 ];
 export default function Hero() {

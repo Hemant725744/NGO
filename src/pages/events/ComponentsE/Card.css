@@ -17,9 +17,8 @@ body {
 /* Apply background to the main container */
 .card-background {
   background-color: var(--pista-green); /* Pista green background */
-  min-height: 100vh; /* Ensure full viewport height */
-  padding-top: 40px; /* Add some padding at the top */
-  padding-bottom: 40px; /* Add some padding at the bottom */
+  
+ 
   background-image: url("/5d31ba71-319b-49ac-8031-2055a707c113.jpeg"); /* Add your background image path here */
   background-size: cover; /* Cover the entire container */
   background-repeat: no-repeat; /* Do not repeat the image */

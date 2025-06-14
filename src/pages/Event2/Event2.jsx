@@ -18,11 +18,11 @@ import Seed3 from "../Event2/Assets/Seed Collection/IMG20230402094011.jpg"
 
 import Kille1 from "../Event2/Assets/Kille/UDY_8287.JPG";
 import Kille2 from "../Event2/Assets/Kille/IMG20211117161911 (1).jpg";
-import Kille3  from "../Event2/Assets/Kille/win.JPG"
+import Kille3 from "../Event2/Assets/Kille/win.JPG"
 
 
-import Balak1 from "../Event2/Assets/Balak Palak/1.jpg" ; 
-import Balak2 from "../Event2/Assets/Balak Palak/14847.jpg" ; 
+import Balak1 from "../Event2/Assets/Balak Palak/1.jpg";
+import Balak2 from "../Event2/Assets/Balak Palak/14847.jpg";
 import Balak3 from "../Event2/Assets/Balak Palak/IMG-20210926-WA0068.jpg"
 
 
@@ -77,6 +77,9 @@ import BackgroundImage from "../Event2/Assets/Background Image/5d31ba71-319b-49a
 
 // JSON Configuration Data
 const Event2Data = [
+    // Find each initiative in the Event2Data array and update the impact fields
+
+    // For "Balak Palak Initiative" (Trees Planted)
     {
         id: 1,
         title: "Balak Palak Initiative",
@@ -89,38 +92,23 @@ const Event2Data = [
         images: [Balak1, Balak2, Balak3],
         govtRecognized: true,
         recognitionId: "EDU/MAH/2022/056",
-        impact: "200+ students | 15 schools covered"
-    }
+        impact: "5.4 lakh (540,000) trees planted through the 'Balak Palak' initiative"
+    },
 
-    , {
-
+    // For "Vidyarthi Dashetun Harith Sanskar" (Students Reached)
+    {
         id: 2,
         title: "Vidyarthi Dashetun Harith Sanskar",
         category: `environmentl Education Program",
-        description: " To instill environmental awareness and sustainability principles in students, promoting eco-friendly practices 
-and responsible citizenship.Empowering students with green values to foster a sustainable future`  ,
+    description: " To instill environmental awareness and sustainability principles in students, promoting eco-friendly practices 
+and responsible citizenship.Empowering students with green values to foster a sustainable future"`,
         images: [Vidyarthi1, Vidyarthi2, Vidyarthi3],
-
         govtRecognized: true,
         recognitionId: "EDU/NSHK/2023/056",
-        impact: "200+ students | 10 schools covered"
-
-    }
-
-    , {
-        id: 3,
-        title: "Vruksha Utsave 2023",
-        date: "2023-05-16",
-        location: "Nashik Ozar",
-        district: "Nashik",
-        state: "Maharashtra",
-        category: "Vruksha Utsave",
-        description: ` Vrukshotsav 2023 is an exhibition that provides hands-on knowledge to the general public, especially students `,
-        images: [Vruksh1, Vruksh2],
-        govtRecognized: true,
-        recognitionId: "VRU/MAH/2021/089",
-        impact: "100+ volunteers | 4000  + Vruksha Utsave"
+        impact: "Connected 3,000 schools and over 15 lakh (1.5 million) students, building a revolutionary movement"
     },
+
+    // For "Vruksh Dattak sankalpana" (Tree Adoption)
     {
         id: 4,
         title: "Vruksh Dattak sankalpana",
@@ -130,13 +118,14 @@ and responsible citizenship.Empowering students with green values to foster a su
         state: "Maharashtra",
         category: "Cultural Art Exhibition",
         description: ` The "Vriksha Dattak" concept aims to create awareness that a tree is more precious than a child, fostering love 
-          and appreciation for trees`,
+      and appreciation for trees`,
         images: [Dattak1, Dattak2, Dattak3, Dattak4],
         govtRecognized: true,
         recognitionId: "Dattak/MAH/2021/142",
-        impact: "22 artisans | 4,000+ visitors"
+        impact: "Connected 31+ courts, 100+ judges in Maharashtra, & thousands of lawyers with citizens, fostering environmental responsibility"
     },
 
+    // For "Jal Mandir" (Water Conservation)
     {
         id: 5,
         title: "Jal Mandir ",
@@ -146,49 +135,13 @@ and responsible citizenship.Empowering students with green values to foster a su
         state: "Maharashtra",
         category: "Cultural Art Exhibition",
         description: `Jal Mandir" aims to conserve and recharge groundwater through rainwater harvesting, promoting sustainable water `,
-        images: [jal1, jal2, jal3 , jal4 ,],
+        images: [jal1, jal2, jal3, jal4,],
         govtRecognized: true,
         recognitionId: "Dattak/MAH/2021/142",
-        impact: "22 artisans | 4,000+ visitors"
+        impact: "35+ percolation pits constructed | 1.6 crore (16 million) liters of water saved per year"
     },
 
-
-
-
-    {
-        id: 6,
-        title: " Kille banva kille jagva",
-        date: "2022-03-15",
-        location: "Dhule Municipal School",
-        district: "Dhule",
-        state: "Maharashtra",
-        category: "Child Education Program",
-        description: `We had competition  for making different fort of shivaji maharaj all over Maharashtra in the month of November 2021 
-during pandemic`,
-        images: [Kille1, Kille2, Kille3],
-        govtRecognized: true,
-        recognitionId: "EDU/MAH/2022/056",
-        impact: "75+ students | 15 schools covered"
-    }
-
-    ,
-    {
-        id: 7,
-        title: "Seed Collection",
-        date: "2022-03-15",
-        location: "Manchar Municipal School",
-        district: "pune",
-        state: "Maharashtra",
-        category: "Child Education Program",
-        description: "Educational program focusing on digital literacy for underprivileged children in rural areas. The initiative provided tablets and digital learning resources to 200+ students.",
-        images: [Seed1, Seed2, Seed3],
-        govtRecognized: true,
-        recognitionId: "EDU/MAH/2022/056",
-        impact: "200+ students | 15 schools covered"
-    }
-
-
-    ,
+    // For "Seed ball Event" (Seed Ball Making)
     {
         id: 8,
         title: "Seed ball Event ",
@@ -204,31 +157,7 @@ B) The Seed Balls Event aims to sow seeds of change, greening barren lands and b
         images: [Seedball1, Seedball2, Seedball3, Seedball4],
         govtRecognized: true,
         recognitionId: "EDU/MAH/2022/056",
-        impact: "200+ students | 15 schools covered"
-    }
-
-
-    ,
-
-
-    {
-        id: 8,
-        title: "Water Saving Ranala  ",
-        date: "2022-03-15",
-        location: "Manchar Municipal School",
-        district: "pune",
-        state: "Maharashtra",
-        category: "Child Education Program",
-        description: `he project consist of solving the problem of water at Ranala gaon.
-We did a geological survey of the land and cleaned the existing pond which was in very bad condition and filled with 
-garbage etc. And made changes to the way water was filled in ground through rain water harvesting. 
-Even the pond was usable again. This project took 2monts of constant working. 
-Now the place has very less problem of water after last year. 
-`,
-        images: [Water1, Water2, Water3, Water4, Water5],
-        govtRecognized: true,
-        recognitionId: "EDU/MAH/2022/056",
-        impact: "200+ students | 15 schools covered"
+        impact: "1.8 lakh (180,000) seed balls created and distributed"
     }
 
 
@@ -350,24 +279,7 @@ const Event2 = () => {
             </div>
 
             {/* Eco Stats Banner */}
-            <div className="eco-stats-banner">
-                <div className="container">
-                    <div className="d-flex flex-wrap justify-content-center gap-4 gap-lg-5">
-                        <div className="eco-stat">
-                            <div className="stat-number">15,000+</div>
-                            <div className="stat-label">Seeds Collected</div>
-                        </div>
-                        <div className="eco-stat">
-                            <div className="stat-number">10,000+</div>
-                            <div className="stat-label">Trees Planted</div>
-                        </div>
-                        <div className="eco-stat">
-                            <div className="stat-number">25,000+</div>
-                            <div className="stat-label">Lives Impacted</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
 
             <div className="container position-relative content-wrapper">
                 {/* Continuous typing effect title */}

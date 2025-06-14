@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/Layout.css';
-import { AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 import image1 from "../assets/sample1.1.jpeg";
 import image2 from "../assets/sample1.2.jpeg";

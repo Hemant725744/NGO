@@ -11,12 +11,12 @@ const Event = () => {
     return (
         <div>
             {/* <Swipper /> */}
-            <Card />
-            {/* <Eventlist /> */}
-            <Event2/>
-            <WhatsAppButton/>
 
-            <Footer/>
+            {/* <Eventlist /> */}
+            <Event2 />
+            <WhatsAppButton />
+
+            <Footer />
         </div>
     )
 }
