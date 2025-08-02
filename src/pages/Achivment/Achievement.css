@@ -282,3 +282,54 @@ body {
 	}
 	
 }
+
+/* Event Section Styles (matching initiatives) */
+.event-section {
+    margin-bottom: 3rem;
+}
+
+.event-image {
+    opacity: 0;
+    transform: translateX(-50px);
+}
+
+.event-text {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.event-section .badge {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+}
+
+.badge.bg-govt {
+    background-color: var(--primary-color) !important;
+    color: white;
+}
+
+.badge.bg-category {
+    background-color: var(--secondary-color) !important;
+    color: white;
+}
+
+.impact-badge {
+    font-size: 1rem;
+    color: var(--tertiary-color);
+}
+
+.recognition-badge {
+    font-size: 0.9rem;
+    color: var(--tertiary-color);
+}
+
+/* Responsive adjustments for event sections */
+@media (max-width: 767px) {
+    .event-section.flex-row-reverse {
+        flex-direction: column !important;
+    }
+    
+    .event-section .col-md-6 {
+        margin-bottom: 1rem;
+    }
+}

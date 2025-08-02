@@ -5,16 +5,26 @@
   position: relative;
   width: 100%;
   min-height: 60vh;
-  height: 900px;
+  height: clamp(600px, 100vh, 900px);
   background-size: cover;
   background-position: center;
-  padding: 80px 20px;
+  background-attachment: fixed;
+  padding: clamp(40px, 8vh, 80px) 20px;
   color: #e8f5e9;
   font-family: 'Poppins', sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+
+/* Disable parallax on mobile for better performance */
+@media (max-width: 768px) {
+  .intro-section {
+    background-attachment: scroll;
+    height: clamp(500px, 80vh, 700px);
+    padding: clamp(30px, 6vh, 60px) 15px;
+  }
 }
 
 .intro-overlay {
@@ -30,18 +40,23 @@
 .intro-content {
   position: relative;
   z-index: 1;
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
+  padding: 0 clamp(15px, 4vw, 30px);
+  width: 100%;
 }
 
 .intro-heading {
-  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-size: clamp(2rem, 6vw, 4rem);
   font-weight: 900;
-  letter-spacing: 2px;
+  letter-spacing: clamp(1px, 0.5vw, 2px);
   text-transform: uppercase;
   font-family: 'Poppins', sans-serif;
   color: #ffffff;
-  margin-bottom: 1rem;
+  margin-bottom: clamp(1rem, 3vw, 2rem);
+  line-height: 1.2;
+  word-break: break-word;
+  hyphens: auto;
 }
 
 .highlighted-text {
@@ -65,8 +80,28 @@
 .intro-btn-group {
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  gap: clamp(0.5rem, 2vw, 1rem);
   flex-wrap: wrap;
+  margin-top: clamp(1.5rem, 4vw, 2.5rem);
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.intro-btn {
+  padding: clamp(10px, 2vw, 14px) clamp(20px, 4vw, 32px);
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: clamp(0.85rem, 1.5vw, 1rem);
+  min-width: clamp(120px, 25vw, 160px);
+  text-align: center;
+  border: 2px solid transparent;
+  display: inline-block;
+  white-space: nowrap;
+  flex: 1 1 auto;
+  max-width: 200px;
 }
 
 .intro-btn-dark {
@@ -74,7 +109,6 @@
   border: none;
   color: #c6f6d5;
   transition: 0.3s;
-  min-width: 140px;
 }
 
 .intro-btn-dark:hover {
@@ -86,7 +120,6 @@
   border: 2px solid #c6f6d5;
   color: #c6f6d5;
   transition: 0.3s;
-  min-width: 140px;
 }
 
 .intro-btn-outline:hover {
@@ -99,13 +132,27 @@
   min-height: 100vh;
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
+  background-attachment: scroll;
+  padding: clamp(60px, 10vh, 100px) 0;
   position: relative;
-  overflow: hidden;
-  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.mission-heading {
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  font-weight: 900;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+  margin-bottom: clamp(2rem, 6vh, 4rem);
+  letter-spacing: clamp(1px, 0.3vw, 2px);
   text-align: center;
   font-family: 'Poppins', sans-serif;
-  color: rgb(7, 63, 24);
+  text-transform: uppercase;
+  position: relative;
+  z-index: 2;
 }
 
 /* Overlay for mission section */
@@ -120,40 +167,6 @@
   z-index: 1;
 }
 
-/* Responsive mission heading */
-.mission-heading {
-  font-weight: 900;
-  text-align: center;
-  font-family: 'Poppins', sans-serif;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: rgb(9, 71, 6);
-  display: inline-block;
-  margin: 0 auto 30px;
-  border-bottom: 4px solid rgb(9, 71, 6);
-  padding-bottom: 6px;
-  line-height: 1.2;
-  font-size: 5rem; /* Desktop default */
-}
-
-@media (max-width: 991px) {
-  .mission-heading {
-    font-size: 3.8rem;
-  }
-}
-
-@media (max-width: 767px) {
-  .mission-heading {
-    font-size: 3rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .mission-heading {
-    font-size: 2.2rem;
-  }
-}
-
 /* Content row spacing */
 .mission-content-row {
   max-width: 1200px;
@@ -165,16 +178,20 @@
 
 /* Mission text card */
 .mission-card {
-  background-color: rgba(141, 255, 147, 0.9);
-  border-radius: 20px;
-  font-size: clamp(1rem, 2vw, 1.3rem);
-  line-height: 1.8;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.85));
+  backdrop-filter: blur(15px);
+  border-radius: clamp(15px, 3vw, 25px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  line-height: 1.6;
   color: rgb(7, 63, 24);
   width: 100%;
-  min-height: 250px;
-  padding: 30px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  min-height: auto;
+  padding: clamp(20px, 5vw, 40px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
 }
 
 .mission-card:hover {
@@ -184,17 +201,21 @@
 
 /* Mission video wrapper */
 .mission-video-wrapper {
-  border-radius: 20px;
+  border-radius: clamp(15px, 3vw, 25px);
   overflow: hidden;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.1);
 }
 
 .mission-video {
   width: 100%;
   height: auto;
-  max-height: 520px;
-  border-radius: 20px;
+  max-height: clamp(250px, 50vh, 520px);
+  border-radius: clamp(15px, 3vw, 25px);
   display: block;
+  object-fit: cover;
 }
 
 /* Responsive fixes */
@@ -212,6 +233,15 @@
   .mission-video {
     max-height: 300px;
   }
+
+  .intro-btn-group {
+    gap: 0.8rem;
+  }
+
+  .intro-btn {
+    min-width: 120px;
+    padding: 12px 20px;
+  }
 }
 
 /* Smaller intro section height on small devices */
@@ -222,6 +252,43 @@
   }
 
   .intro-heading {
-    font-size: 2.8rem;
+    font-size: clamp(1.8rem, 8vw, 2.5rem);
+    line-height: 1.2;
+    letter-spacing: 1px;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 360px) {
+  .intro-section {
+    height: 550px;
+    padding: 30px 10px;
+  }
+
+  .intro-content {
+    padding: 0 15px;
+  }
+
+  .intro-heading {
+    font-size: clamp(1.5rem, 9vw, 2rem);
+    line-height: 1.1;
+    letter-spacing: 0.5px;
+  }
+
+  .intro-animated-text {
+    font-size: clamp(1.2rem, 6vw, 1.8rem);
+    margin-bottom: 2rem;
+  }
+
+  .intro-btn-group {
+    gap: 0.5rem;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .intro-btn {
+    width: 100%;
+    max-width: 200px;
+    padding: 14px 20px;
   }
 }

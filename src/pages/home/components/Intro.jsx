@@ -66,15 +66,15 @@ function Intro() {
           </AnimatePresence>
 
           <motion.div
-            className="mt-4 intro-btn-group"
+            className="intro-btn-group"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.8 }}
           >
-            <Button className="intro-btn-dark me-3 px-4 py-2 shadow-sm rounded-pill">
+            <Button className="intro-btn intro-btn-dark me-2 me-md-3 px-3 px-md-4 py-2 shadow-sm rounded-pill">
               Get Involved
             </Button>
-            <Button className="intro-btn-outline px-4 py-2 shadow-sm rounded-pill">
+            <Button className="intro-btn intro-btn-outline px-3 px-md-4 py-2 shadow-sm rounded-pill">
               Learn More
             </Button>
           </motion.div>

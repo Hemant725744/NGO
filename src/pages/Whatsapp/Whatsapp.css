@@ -1,8 +1,8 @@
 /* Whatsapp.css */
 .whatsapp-container {
   position: fixed;
-  bottom: 20px;
-  right: 20px; /* Changed from left to right */
+  bottom: clamp(15px, 3vw, 20px);
+  right: clamp(15px, 3vw, 20px);
   z-index: 1000;
 }
 
@@ -10,8 +10,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 60px;
-  height: 60px;
+  width: clamp(50px, 12vw, 60px);
+  height: clamp(50px, 12vw, 60px);
   background-color: #25d366;
   border-radius: 50%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -25,7 +25,35 @@
 }
 
 .whatsapp-icon {
+  width: clamp(30px, 8vw, 40px);
+  height: clamp(30px, 8vw, 40px);
   transition: transform 0.3s ease;
+}
+
+/* Mobile specific adjustments */
+@media (max-width: 768px) {
+  .whatsapp-container {
+    bottom: 15px;
+    right: 15px;
+  }
+  
+  .whatsapp-button {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .whatsapp-icon {
+    width: 30px;
+    height: 30px;
+  }
+  
+  /* Disable hover effects on touch devices */
+  @media (hover: none) {
+    .whatsapp-button:hover {
+      transform: none;
+      background-color: #25d366;
+    }
+  }
 }
 
 /* Tooltip customization - left position */

@@ -1,12 +1,12 @@
 /* Footer.css - Light Theme */
 .footer-container {
     position: relative;
-    background: linear-gradient(135deg, #a9fdf9 0%, #ffffff 100%); /* Lighter blue-green gradient */
-    color: #333; /* Darker text for contrast */
-    padding: 5rem 2rem 2rem;
+    background: linear-gradient(135deg, #a9fdf9 0%, #ffffff 100%);
+    color: #333;
+    padding: clamp(2rem, 8vw, 5rem) clamp(1rem, 4vw, 2rem) 2rem;
     overflow: hidden;
     font-family: "Poppins", "Segoe UI", sans-serif;
-    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.05);
 }
 
 .leaf-background {
@@ -16,25 +16,48 @@
     width: 100%;
     height: 100%;
     pointer-events: none;
-    opacity: 0.35; /* Slightly more visible for light theme */
+    opacity: 0.35;
     z-index: 1;
 }
 
 .leaf {
     position: absolute;
-    color: #66bb6a; /* A vibrant green for leaves */
+    color: #66bb6a;
     z-index: 1;
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.08));
 }
 
 .footer-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: clamp(1.5rem, 5vw, 3rem);
     max-width: 1400px;
     margin: 0 auto;
     position: relative;
     z-index: 2;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+    
+    .footer-section {
+        align-items: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .footer-container {
+        padding: 2rem 1rem 1.5rem;
+    }
+    
+    .footer-content {
+        gap: 1.5rem;
+    }
 }
 
 .footer-section {

@@ -9,14 +9,35 @@
   --eco-gold: #ffd54f;
   --eco-red: #e53935;
   --eco-yellow: #ffca28;
+  
+  /* Matching initiatives color scheme */
+  --primary-color: #B17F59;
+  --secondary-color: #A5B68D;
+  --tertiary-color: #C1CFA1;
+  --background-color: #EDE8DC;
 }
 
 .event2-container {
   min-height: 100vh;
-  padding-top: 2rem;
-  padding-bottom: 4rem;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
   position: relative;
   overflow: hidden;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .event2-container {
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .event2-container {
+    padding-top: 0;
+    padding-bottom: 0.5rem;
+  }
 }
 
 .background-container {
@@ -94,7 +115,7 @@
 
 /* Typing effect */
 .typing-effect {
-  font-size: 3.2rem;
+  font-size: clamp(1.8rem, 5vw, 3.2rem);
   font-weight: 800;
   background: linear-gradient(45deg, var(--dark-green), var(--primary-green));
   -webkit-background-clip: text;
@@ -105,6 +126,21 @@
   margin-bottom: 0.5rem;
   position: relative;
   z-index: 10;
+}
+
+/* Mobile typography adjustments */
+@media (max-width: 768px) {
+  .typing-effect {
+    font-size: clamp(1.5rem, 6vw, 2.5rem);
+    letter-spacing: 0.5px;
+  }
+}
+
+@media (max-width: 576px) {
+  .typing-effect {
+    font-size: clamp(1.2rem, 7vw, 2rem);
+    letter-spacing: 0;
+  }
 }
 
 .blinking-cursor {
@@ -126,7 +162,46 @@
   animation: fadeOut 0.5s forwards;
 }
 
+/* Add responsive utility classes */
+@media (max-width: 576px) {
+  .initiative-section {
+    margin: 0 !important;
+    border-radius: 8px !important;
+  }
+  
+  .swiper-pagination {
+    bottom: 5px !important;
+  }
+  
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 30px !important;
+    height: 30px !important;
+    margin-top: -15px !important;
+  }
+  
+  .swiper-button-next:after,
+  .swiper-button-prev:after {
+    font-size: 14px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .badge {
+    font-size: 0.7rem !important;
+    padding: 0.25rem 0.5rem !important;
+  }
+  
+  .alert {
+    padding: 0.5rem !important;
+    font-size: 0.85rem !important;
+  }
+}
+
 @keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
   to {
     opacity: 0;
   }
@@ -407,4 +482,88 @@
     flex-direction: column;
     gap: 1rem;
   }
+}
+
+/* Event Section Styles (matching initiatives layout) */
+.event-section {
+    margin-bottom: 4rem;
+    padding: 2rem 0;
+}
+
+.event-image {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 0.8s ease;
+}
+
+.event-text {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease;
+}
+
+.event-section .badge {
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+    margin: 0.2rem;
+    border-radius: 20px;
+}
+
+.badge.bg-govt {
+    background-color: var(--primary-color) !important;
+    color: white;
+}
+
+.badge.bg-category {
+    background-color: var(--secondary-color) !important;
+    color: white;
+}
+
+.impact-badge {
+    font-size: 1.1rem;
+    color: var(--tertiary-color);
+    font-weight: 500;
+}
+
+.recognition-badge {
+    font-size: 1rem;
+    color: var(--tertiary-color);
+    font-weight: 500;
+}
+
+.event-text h3 {
+    color: var(--primary-color) !important;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.event-text .btn-outline-light {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.event-text .btn-outline-light:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(177, 127, 89, 0.3);
+}
+
+/* Responsive adjustments for event sections */
+@media (max-width: 767px) {
+    .event-section.flex-row-reverse {
+        flex-direction: column !important;
+    }
+    
+    .event-section .col-md-6 {
+        margin-bottom: 2rem;
+    }
+    
+    .event-section {
+        margin-bottom: 3rem;
+        padding: 1rem 0;
+    }
 }

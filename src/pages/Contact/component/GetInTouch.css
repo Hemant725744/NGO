@@ -2,7 +2,7 @@
 .get-in-touch {
   min-height: 100vh;
   background: linear-gradient(135deg, #f0fdfa 0%, #ecfeff 100%);
-  padding: 5rem 0;
+  padding: clamp(2rem, 8vw, 5rem) 0;
   position: relative;
   overflow: hidden;
 }
@@ -23,7 +23,7 @@
 }
 
 .section-title {
-  font-size: 3.5rem;
+  font-size: clamp(2rem, 7vw, 3.5rem);
   color: #0f766e;
   margin-bottom: 1rem;
   font-weight: 800;
@@ -37,13 +37,40 @@
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  letter-spacing: -1.5px;
+  letter-spacing: clamp(-1px, -0.3vw, -1.5px);
 }
 
 .blink-cursor {
   animation: blink 1s infinite;
   color: #0f766e;
   margin-left: 4px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .get-in-touch {
+    padding: 2rem 0;
+  }
+  
+  .section-title {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .typing-text {
+    letter-spacing: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .get-in-touch {
+    padding: 1.5rem 0;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
 }
 
 @keyframes blink {

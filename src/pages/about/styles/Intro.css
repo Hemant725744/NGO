@@ -1,6 +1,6 @@
 .intro-section {
   background-color: #d3e4fd;
-  padding: 80px 20px;
+  padding: clamp(40px, 8vw, 80px) clamp(15px, 4vw, 20px);
 }
 
 .intro-container {
@@ -8,20 +8,20 @@
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: clamp(20px, 5vw, 40px);
   align-items: center;
   justify-content: space-between;
-  padding: 0 20px; /* Add horizontal padding */
+  padding: 0 clamp(10px, 3vw, 20px);
 }
 
 .intro-content {
-  flex: 1 1 500px;
+  flex: 1 1 300px;
   min-width: 280px;
-  padding-right: 20px; /* Add right padding on desktop */
+  padding-right: clamp(0px, 3vw, 20px);
 }
 
 .intro-content h1 {
-  font-size: 2.5rem;
+  font-size: clamp(1.8rem, 6vw, 2.5rem);
   font-weight: 800;
   color: #333;
   line-height: 1.2;
@@ -36,16 +36,17 @@
 }
 
 .intro-content p {
-  margin-top: 20px;
-  font-size: 1.2rem;
+  margin-top: clamp(15px, 3vw, 20px);
+  font-size: clamp(1rem, 3vw, 1.2rem);
   color: #555;
   max-width: 600px;
   margin-left: 0;
   margin-right: 0;
+  line-height: 1.6;
 }
 
 .intro-video {
-  flex: 1 1 500px;
+  flex: 1 1 300px;
   min-width: 280px;
   max-width: 100%;
   padding-left: 20px; /* Add left padding on desktop */
